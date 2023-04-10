@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '101317769_comp3133_assig2';
+
+  constructor() { }
+
+  ngOnInit(): void {
+    
+  }
 }

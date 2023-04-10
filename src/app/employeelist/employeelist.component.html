@@ -1,0 +1,29 @@
+<h1>Employee List</h1>
+<p>Welcome {{ user }}! </p>
+<button (click)="logout()">Logout</button>
+
+<button (click)="goToCreateEmployee()">Create Employee</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.firstName }}</td>
+      <td>{{ employee.lastName }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.gender }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>
+        <button (click)="deleteEmployee(employee._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
